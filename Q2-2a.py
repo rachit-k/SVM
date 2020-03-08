@@ -16,16 +16,14 @@ m=x.shape[0]
 gamma=0.05
 
 
-
-
 def func(mm,nn):
-    d1=x[(y==mm,)]
-    d2=x[(y==nn,)]
-    n1=d1.shape[0]
-    n2=d2.shape[0]
+    x1=x[(y==mm,)]
+    x2=x[(y==nn,)]
+    n1=x1.shape[0]
+    n2=x2.shape[0]
     m=n1+n2
     
-    X=np.concatenate((d1, d2), axis=0)    
+    X=np.concatenate((x1, x2), axis=0)    
     Y=np.concatenate((np.ones((n1,1))*(-1.0),np.ones((n2,1))),axis=0)
     q=np.ones((m,1))*(-1)
     G=np.concatenate((np.diag(np.ones(m)),np.diag(np.ones(m)*(-1.0))),axis=0)

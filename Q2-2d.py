@@ -46,7 +46,7 @@ print(vscores)
 print(tscores)   
 plt.plot(c_list, vscores,'-o',label='validation scores')  
 plt.plot(c_list, tscores,'-o',label='test scores')
-plt.savefig("Q2-2d.png",bbox_inches="tight")
+#plt.savefig("Q2-2d.png",bbox_inches="tight")
 plt.show()
 
 #time:
